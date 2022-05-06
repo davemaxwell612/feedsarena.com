@@ -180,7 +180,7 @@ export default {
         }
 
         .content > div {
-        height: 100vh;
+        /* height: 100vh; */
         overflow-y: inherit;
         }
 
