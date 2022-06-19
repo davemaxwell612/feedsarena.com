@@ -8,7 +8,7 @@
       <main class="content">
         <div class="bg-gray-200 main_section">
            <TrendingPosts />
-          <MainPostSection />
+          <Posts />
         </div>
       </main>
 
@@ -23,14 +23,14 @@
 // @ is an alias to /src
 import TrendingPosts from '../components/TrendingPosts.vue'
 import Thesidebar from '../components/Thesidebar.vue'
-import MainPostSection from '../components/MainPostSection.vue'
+import Posts from '../views/Posts/Posts.vue'
 
 export default {
   name: 'Home',
   components: {
     TrendingPosts,
     Thesidebar,
-    MainPostSection
+    Posts
   }
 }
 </script>
