@@ -9,6 +9,30 @@
       <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Feeds Today</span>
     </li>
     </router-link>
+
+    <router-link :to="{path: '/'}">
+    <li class="flex items-center">
+      <span class="self-center text-sm font-semibold whitespace-nowrap dark:text-white">Education</span>
+    </li>
+    </router-link>
+
+    <router-link :to="{path: '/'}">
+    <li class="flex items-center">
+      <span class="self-center text-sm font-semibold whitespace-nowrap dark:text-white">Jobs</span>
+    </li>
+    </router-link>
+
+    <router-link :to="{path: '/'}">
+    <li class="flex items-center">
+      <span class="self-center text-sm font-semibold whitespace-nowrap dark:text-white">Feeds</span>
+    </li>
+    </router-link>
+
+    <router-link :to="{path: '/'}">
+    <li class="flex items-center">
+      <span class="self-center text-sm font-semibold whitespace-nowrap dark:text-white">Howto</span>
+    </li>
+    </router-link>
     
   <div class="flex md:order-1">
     <div class="hidden relative mr-3 md:mr-0 md:block">

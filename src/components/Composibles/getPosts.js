@@ -14,12 +14,12 @@ const getPosts = () => {
 
             if(!data.ok){
 
-                throw Error('Something went wrong while trying to load the requested data')
+                throw Error ('Something went wrong while trying to load the requested data')
             }
 
             posts.value = await data.json()
 
-        } catch (error) {
+        } catch (err) {
             
             error.value = err.message
             

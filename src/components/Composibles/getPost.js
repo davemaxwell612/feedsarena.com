@@ -10,11 +10,11 @@ const getPost = (id) => {
        
         try{
            
-            let data = await fetch('http://localhost:3000/posts/' + this.id)
+            let data = await fetch('http://localhost:3000/posts/' + id)
             
             if(!data.ok){
                 
-                throw Error('An unknown error has occured')
+                throw Error('Error, Unable to find post')
             }
 
             post.value = await data.json()
