@@ -7,7 +7,7 @@
             </svg>
             </span>
         </label>
-        <div class="flex-grow"><p class="text-2xl">Top Trends on Feedspot Today</p></div>
+        <div class="flex-grow"><p class="text-2xl">Trending Today</p></div>
     </header>
     
     <div class="px-5 pb-2 container">

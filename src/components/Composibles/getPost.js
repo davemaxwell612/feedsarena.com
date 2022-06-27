@@ -2,9 +2,9 @@ import {ref} from 'vue'
 
 const getPost = (id) => {
 
-    const post = ref(null);
+    const post = ref(null)
 
-    const error = ref(null);
+    const error = ref(null)
 
     const load = async () => {
        

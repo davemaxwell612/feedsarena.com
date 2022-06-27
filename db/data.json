@@ -3,13 +3,15 @@
 
             {
                 "id": 1,
-                "title":"How to Customize Your Name on Your Youtube Channel", 
+                "tittle":"How to Customize Your Name on Your Youtube Channel",
+                "body":"current breakpoint. This is useful if you'd prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport.", 
                 "meta":"Follow this simple steps to customize your youtube channel name", 
                 "cat":"Internet"
             },
             {
                 "id": 2,
-                "title":"How to Fetch Image Locally in Vue with Json", 
+                "tittle":"How to Fetch Image Locally in Vue with Json", 
+                "body":"current breakpoint. This is useful if you'd prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport.", 
                 "meta":"Follow this simple steps to customize your youtube channel name", 
                 "cat":"Programming"
             }

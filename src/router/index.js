@@ -25,18 +25,34 @@ const routes = [
   {
     path: '/posts',
     name: 'Posts',
-    component: Posts
+    component: Posts,
   },
   {
     path: '/posts/:id',
     name: 'SinglePost',
-    component: SinglePost
+    component: SinglePost,
+    props: true
   },
   {
     path: '/signup',
     name: 'SignUp',
     component: SignUp
   },
+  // {
+  //   path: '/education',
+  //   name: 'Education',
+  //   component: Education
+  // },
+  // {
+  //   path: '/jobs',
+  //   name: 'Jobs',
+  //   component: Jobs
+  // },
+  // {
+  //   path: '/howTo',
+  //   name: 'howTo',
+  //   component: howTo
+  // },
   {
     path: '/about',
     name: 'About',

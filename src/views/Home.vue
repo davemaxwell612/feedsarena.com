@@ -3,11 +3,11 @@
     <div class="flex justify-end h-full">
         <input class="hidden" aria-hidden="true" checked="checked" type="checkbox" name="" id="sidebar-toggle">
         
-        <Thesidebar />
+        <!-- <Thesidebar /> -->
 
       <main class="content">
         <div class="bg-gray-200 main_section">
-           <TrendingPosts />
+           <!-- <TrendingPosts /> -->
           <Posts />
         </div>
       </main>
