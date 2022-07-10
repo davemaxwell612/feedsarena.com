@@ -1,19 +1,19 @@
 <template>
     <div class="posts">
-    <Posts :post="posts" />  
+    <SinglePost :post="posts" />  
     </div>
 </template>
 
 <script>
 
-import Posts from '../views/Posts/Posts.vue'
+import SinglePost from '../components/SinglePost.vue'
 
 export default {
 
     props:['posts'],
 
     components:{
-        Posts
+        SinglePost
     }
 }
 </script>

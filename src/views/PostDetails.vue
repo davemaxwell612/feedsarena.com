@@ -9,13 +9,15 @@
 
             <div class="w-full lg:w-7/12 mb-2 p-1">
 
-              <div v-if="error">
-                <p class="title-5 red-500" color="red">{{error}}</p>
-                </div>
                 <div v-if="post">
-                    <h1 class="text-4xl font-medium leading-tight">{{post.tittle}}</h1>
+                    <h1 class="text-4xl font-medium leading-tight">{{post.title}}</h1>
 
                     <p class="leading-9 subpixel-antialiased">{{post.body}}</p>
+                </div>
+
+                <div v-else>
+                <!-- <p class="title-5 red-500" color="red">{{error}}</p> -->
+                    <Loader color="green" scale="0.6" />
                 </div>
 
             </div>
@@ -38,12 +40,13 @@
 </template>
 <script>
 
-import getPost from '../../components/Composibles/getPost'
-import FrontSideBar from '../../components/FrontSideBar.vue'
+import getPost from '../Composibles/getPost'
+import FrontSideBar from '../components/FrontSideBar.vue'
+import Loader from '../components/Loader.vue'
 
 export default {
 
-components:{FrontSideBar},
+components:{FrontSideBar, Loader},
 
     props:['id'],
 

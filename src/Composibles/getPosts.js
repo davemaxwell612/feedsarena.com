@@ -29,7 +29,7 @@ const getPosts = () => {
 
     }
 
-    return {error, posts, load}
+    return {posts, error, load}
     
 }
 

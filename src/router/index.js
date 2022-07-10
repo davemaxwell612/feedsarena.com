@@ -3,8 +3,7 @@ import Home from '../views/Home.vue'
 import CreateNewPost from '../views/CreateNewPost.vue'
 import Login from '../views/Login.vue'
 import SignUp from '../views/SignUp.vue'
-import SinglePost from '../views/Posts/SinglePost.vue'
-import Posts from '../views/Posts/Posts.vue'
+import PostDetails from '../views/PostDetails.vue'
 
 const routes = [
   {
@@ -22,15 +21,11 @@ const routes = [
     name: 'Login',
     component: Login
   },
-  {
-    path: '/posts',
-    name: 'Posts',
-    component: Posts,
-  },
+  
   {
     path: '/posts/:id',
-    name: 'SinglePost',
-    component: SinglePost,
+    name: 'PostDetails',
+    component: PostDetails,
     props: true
   },
   {

@@ -9,15 +9,15 @@
 
             <div class="w-full lg:w-7/12 mb-2 p-1">
 
-              <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6" v-for="post in posts" :key="post.id">
+              <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6" v-for="post in post" :key="post.id">
                <div class="flex">
                  <div class="shrink-0">
-                    <img class="h-28 w-full object-cover md:h-full md:w-28" src="../../assets/img.png" alt="Man looking at item at a store">
+                    <img class="h-28 w-full object-cover md:h-full md:w-28" src="../assets/img.png" alt="Man looking at item at a store">
                  </div>
                  <div class="pl-4 pt-2">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{post.cat}}</div>
-                    <router-link :to="{name: 'SinglePost', params:{id: post.id}}">
-                    <h1 class="block mt-1 text-lg leading-tight font-medium text-black hover:underline font-bold">{{post.tittle}}</h1>
+                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{post.tags}}</div>
+                    <router-link :to="{name: 'PostDetails', params:{id: post.id}}">
+                    <h1 class="block mt-1 text-lg leading-tight font-medium text-black hover:underline font-bold">{{post.title}}</h1>
                     </router-link>
                     <!-- <p class="mt-2 text-slate-500">Getting a new business off the ground is a lot of hard work.</p> -->
                  </div>
@@ -47,21 +47,19 @@
 
 <script>
 
-import getPosts from '../../components/Composibles/getPosts'
-import FrontSideBar from '../../components/FrontSideBar.vue'
+import FrontSideBar from '../components/FrontSideBar.vue'
+import { computed } from '@vue/reactivity'
 
 export default {
  components:{FrontSideBar},
  props:['post'],
 
-  setup () {
+  setup (props) {
 
-     const {error, posts, load} = getPosts()
-
-      load()
-
-     return {posts, error}
-
+     const snippet = computed (() => {
+        return props.post.title.sbstring(0,100) + '...'
+     })
+     return{snippet}
   }
    
 }

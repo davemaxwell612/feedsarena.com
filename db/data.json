@@ -1,20 +1,26 @@
 {
-    "posts":[
-
-            {
-                "id": 1,
-                "tittle":"How to Customize Your Name on Your Youtube Channel",
-                "body":"current breakpoint. This is useful if you'd prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport.", 
-                "meta":"Follow this simple steps to customize your youtube channel name", 
-                "cat":"Internet"
-            },
-            {
-                "id": 2,
-                "tittle":"How to Fetch Image Locally in Vue with Json", 
-                "body":"current breakpoint. This is useful if you'd prefer to design for a fixed set of screen sizes instead of trying to accommodate a fully fluid viewport.", 
-                "meta":"Follow this simple steps to customize your youtube channel name", 
-                "cat":"Programming"
-            }
-
-    ]   
+  "posts": [
+    {
+      "title": "N-Power begins Batch C Stream 2 Payments",
+      "body": "Just In: Slap Competition To Begin In Nigeria This Month, The Executive Director, TKK Sport, Mr. Abdullrahman Orosanya, promoter of Slap Fight Nigeria, has disclosed in a statement in Lagos that the date for commencement of the slap competition is yet to be picked.",
+      "cover": "https://fun9ja.com/wp-content/uploads/2021/10/Slapping-Competition-768x416.jpg",
+      "metadata": "Just In: Slap Competition To Begin In Nigeria This Month, The Executive Director, TKK Sport, Mr",
+      "tags": "Jobs",
+      "id": 1,
+      "cat": [
+        "Jobs"
+      ]
+    },
+    {
+      "title": "How to successfully purchase the JAM 2022 Pin",
+      "body": "Veeiye No Time, Veeiye No Time Audio, Talented singer, and songwriter, Veeiye comes through with a new song download.\nThe new song download by BBNaija Vee is a chart-topping song and it is taken from her just-completed studio project titled Young & Reckless.",
+      "cover": "https://fun9ja.com/wp-content/uploads/2021/10/Veeiye-Do-It-Free-Mp3-Download.jpg",
+      "metadata": "The new song download by BBNaija Vee is a chart-topping song and it is taken from her just-completed studio project ",
+      "tags": "Howto",
+      "id": 2,
+      "cat": [
+        "Howto"
+      ]
+    }
+  ]
 }

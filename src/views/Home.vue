@@ -8,7 +8,7 @@
       <main class="content">
         <div class="bg-gray-200 main_section">
            <!-- <TrendingPosts /> -->
-          <Posts />
+          <PostList :posts="posts" />
         </div>
       </main>
 
@@ -21,16 +21,22 @@
 
 <script>
 // @ is an alias to /src
+import PostList from '../components/PostList.vue'
+import getPosts from '../Composibles/getPosts'
 import TrendingPosts from '../components/TrendingPosts.vue'
 import Thesidebar from '../components/Thesidebar.vue'
-import Posts from '../views/Posts/Posts.vue'
 
 export default {
   name: 'Home',
   components: {
+    PostList,
     TrendingPosts,
-    Thesidebar,
-    Posts
+    Thesidebar
+  },
+  setup(){
+    const {posts, error, load} = getPosts()
+    load();
+    return{posts,error}
   }
 }
 </script>
