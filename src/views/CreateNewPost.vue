@@ -20,22 +20,33 @@
       <textarea v-model="metadata" class="w-full px-3 py-2 text-gray-700 border rounded-lg focus:outline-none resize-none" rows="3" placeholder="Enter a post description: this should give a brief overview of what your post is about" required></textarea>
     </div>
 
-    <div class="inline-block relative w-64">
+    <!-- <div class="inline-block relative w-64">
       <select v-model="tags" class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline" required>
         <option>Select a Tag</option>
         <option>Education</option>
         <option>Jobs</option>
         <option>Howto</option>
       </select>
-    </div>
+      
+    </div> -->
 
-  <div class="flex items-center mb-5">
-        <input v-model="cover" type="text" id="name" name="name" placeholder="please enter a link to the post image" 
+    <div class="flex items-center mb-5">
+        <input v-model="tittle" type="text" id="name" name="name" placeholder="ENTER POST TITLE" 
             class="flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
             text-gray-600 placeholder-gray-400
             outline-none text-lg" required>
       </div>
 
+  <div class="flex items-center mb-5">
+    <input 
+        type="text" 
+        placeholder="Press enter to add a tag"
+        v-model="tag"
+        @keydown.enter.prevent="handleKeydown"
+        >
+        <div v-for="tag in tags" :key="tag"> #{{ tag }}</div>
+  </div>
+    
   <div class="mt-8">
      <input type="file" class=" text-gray-700 px-3 py-2 border rounded">
   </div>
@@ -50,14 +61,25 @@
 
 <script>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   setup() {
      const tittle = ref('')
      const body = ref('')
      const cover = ref('')
      const metadata = ref('')
+     const tag = ref('')
      const tags = ref([])
      
+     const router = useRouter()
+
+     const handleKeydown = () => {
+      if(!tags.value.includes(tag.value))  {
+          tag.value = tag.value.replace(/\s/, '')
+          tags.value.push(tag.value)
+      }
+      tag.value = ''
+     }
     
     const handleSubmit = async () =>{
 
@@ -75,9 +97,11 @@ export default {
         body: JSON.stringify(post)
       })
 
+      router.push({name: 'Home'})
+
   }
 
-  return { tittle, body, cover, metadata, tags, handleSubmit}
+  return { tittle, body, cover, metadata, tags, tag, handleKeydown, handleSubmit}
   }
   
 }

@@ -8,18 +8,21 @@
 <!-- =============================================Block Columns for the main posts =============================-->
 
             <div class="w-full lg:w-7/12 mb-2 p-1">
-
+                <div v-if="error">{{error}}</div>
                 <div v-if="post">
                     <h1 class="text-4xl font-medium leading-tight">{{post.title}}</h1>
-
                     <p class="leading-9 subpixel-antialiased">{{post.body}}</p>
                 </div>
 
-                <div v-else>
-                <!-- <p class="title-5 red-500" color="red">{{error}}</p> -->
-                    <Loader color="green" scale="0.6" />
+               <div v-else>
+                   <Spinner />
+               </div>     
+                
+            <div class="grid grid-flow-col auto-cols-max gap-4 mt-5">
+                <div class="bg-gray-200 text-gray-700 px-2 py-2" v-for="tag in post.tags" :key="tag">
+                    <span class="font-semibold"> #{{tag}}</span>
                 </div>
-
+            </div>
             </div>
 
       
@@ -42,17 +45,18 @@
 
 import getPost from '../Composibles/getPost'
 import FrontSideBar from '../components/FrontSideBar.vue'
-import Loader from '../components/Loader.vue'
+import Spinner from '../components/Spinner'
+import { useRoute } from 'vue-router'
 
 export default {
 
-components:{FrontSideBar, Loader},
+components:{FrontSideBar, Spinner},
 
     props:['id'],
 
     setup(props){
-
-        const {post, error, load} = getPost(props.id)
+        const route = useRoute()
+        const {post, error, load} = getPost(route.params.id)
 
         load()
 

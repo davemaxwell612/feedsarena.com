@@ -15,7 +15,7 @@
                     <img class="h-28 w-full object-cover md:h-full md:w-28" src="../assets/img.png" alt="Man looking at item at a store">
                  </div>
                  <div class="pl-4 pt-2">
-                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{post.tags}}</div>
+                    <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">By Admin</div>
                     <router-link :to="{name: 'PostDetails', params:{id: post.id}}">
                     <h1 class="block mt-1 text-lg leading-tight font-medium text-black hover:underline font-bold">{{post.title}}</h1>
                     </router-link>

@@ -8,7 +8,16 @@
       <main class="content">
         <div class="bg-gray-200 main_section">
            <!-- <TrendingPosts /> -->
-          <PostList :posts="posts" />
+           <div v-if="error">{{error}}</div>
+
+            <div v-if="posts.length">
+              <PostList :posts="posts" />
+           </div>
+
+          <div v-else>
+            <Spinner />
+          </div>
+
         </div>
       </main>
 
@@ -25,13 +34,15 @@ import PostList from '../components/PostList.vue'
 import getPosts from '../Composibles/getPosts'
 import TrendingPosts from '../components/TrendingPosts.vue'
 import Thesidebar from '../components/Thesidebar.vue'
+import Spinner from '../components/Spinner.vue'
 
 export default {
   name: 'Home',
   components: {
     PostList,
     TrendingPosts,
-    Thesidebar
+    Thesidebar,
+    Spinner
   },
   setup(){
     const {posts, error, load} = getPosts()
