@@ -31,7 +31,7 @@
     </div> -->
 
     <div class="flex items-center mb-5">
-        <input v-model="tittle" type="text" id="name" name="name" placeholder="ENTER POST TITLE" 
+        <input v-model="cover" type="text" id="name" name="name" placeholder="enter post cover" 
             class="flex-1 py-2 border-b-2 border-gray-400 focus:border-green-400 
             text-gray-600 placeholder-gray-400
             outline-none text-lg" required>
