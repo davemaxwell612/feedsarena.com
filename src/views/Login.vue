@@ -17,13 +17,14 @@
           <input id="remember_me" type="checkbox" class="border border-gray-300 text-red-600 shadow-sm focus:border-red-300 focus:ring focus:ring-red-200 focus:ring-opacity-50" />
           <label for="remember_me" class="ml-2 block text-sm leading-5 text-gray-900"> Remember me </label>
         </div>
-        <a href="#" class="text-sm"> Forgot your password? </a>
+        <!-- <a href="#" class="text-sm"> Forgot your password? </a> -->
+        <router-link to="/forgotpassword" class="text-sm" >Forgot Your Password?</router-link>
       </div>
       <div class="mt-6">
         <button class="w-full inline-flex items-center justify-center px-4 py-2 bg-green-400 border border-transparent rounded-md font-semibold capitalize text-white hover:bg-green-700 active:bg-red-700 focus:outline-none focus:border-red-700 focus:ring focus:ring-red-200 disabled:opacity-25 transition">Sign In</button>
       </div>
       <div class="mt-6 text-center">
-        <a href="#" class="underline">Sign up for an account</a>
+        <router-link to="/signup" class="underline text-sm text-green-300 align-baseline hover:text-green-800">Sign up for an account</router-link>
       </div>
     </form>
   </div>
