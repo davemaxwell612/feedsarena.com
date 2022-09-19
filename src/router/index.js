@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import SignUp from '../views/SignUp.vue'
 import PostDetails from '../views/PostDetails.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: '/forgotpassword',
     name: 'ForgotPassword',
     component: ForgotPassword
+  },
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
   },
   // {
   //   path: '/education',

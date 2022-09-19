@@ -1,5 +1,7 @@
 <template>  
 
+
+
 <!-- <div class="flex-grow pb-3 pl-8"><p class="text-2xl">Technology Feeds</p></div> -->
 
     <div class="container pb-5 pt-5 mx-auto px-4">
@@ -19,10 +21,25 @@
                     <router-link :to="{name: 'PostDetails', params:{id: post.id}}">
                     <h1 class="block mt-1 text-lg leading-tight font-medium text-black hover:underline font-bold">{{post.title}}</h1>
                     </router-link>
-                    <!-- <p class="mt-2 text-slate-500">Getting a new business off the ground is a lot of hard work.</p> -->
+                    <!-- <p class="mt-2 text-slate-500">Getting a new business off the ground is a lot of hard work.</p>
+                        <span class="text-sm text-slate-500">134,768 Views. posted Jun 19, 2022</span> -->
                  </div>
                </div>
               </div>
+               <!-- <div class="max-w-md mx-auto bg-white hover:bg-gray-200 py-3  border-b border-gray-200 overflow-hidden md:max-w-2xl grid grid-cols-3 gap-4" v-for="post in post" :key="post.id">
+
+                  <img class="h-28 w-full col-span-1 object-cover md:h-full md:w-48" :src="post.cover" alt="Man looking at item at a store">
+
+                  <div class="col-span-2">
+                        <div class="uppercase tracking-wide text-sm text-indigo-500 font-light">Course</div>
+                        <router-link :to="{name: 'PostDetails', params:{id: post.id}}">
+                           <h1 class="block mt-1 text-lg leading-tight font-medium text-black hover:underline font-bold">{{post.title}}</h1>
+                        </router-link>
+                        <p class="mt-2 text-slate-500">Getting a new business off the ground is a lot of hard work.</p>
+                        <span class="text-sm text-slate-500">134,768 Views. posted Jun 19, 2022</span>
+                  </div>
+
+               </div> -->
 
             </div>
 
