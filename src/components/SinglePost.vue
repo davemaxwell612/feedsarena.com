@@ -6,17 +6,17 @@
 
     <div class="container pb-5 pt-5 mx-auto px-4">
     <div class="bg-white rounded-lg p-4">
-      <div class="flex flex-wrap gap-x-10 mb-4">
+      <div class="flex flex-wrap gap-x-24 mb-4">
 <!-- =============================================Block Columns for the main posts =============================-->
 
-            <div class="w-full lg:w-7/12 mb-2 p-1">
+            <div class="w-full lg:w-7/12 mb-2 p-1 md:pl-8">
 
               <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6" v-for="post in post" :key="post.id">
                <div class="flex">
                  <div class="shrink-0">
-                    <img class="h-28 w-full object-cover md:h-full md:w-28" :src="post.cover" alt="Man looking at item at a store">
+                    <img class="scale-75 h-28 w-full object-cover md:h-full md:w-28" :src="post.cover" alt="Man looking at item at a store">
                  </div>
-                 <div class="pl-4 pt-2">
+                 <div class="pl-4 pt-2 mb-4">
                     <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">By Admin</div>
                     <router-link :to="{name: 'PostDetails', params:{id: post.id}}">
                     <h1 class="block mt-1 text-lg leading-tight font-medium text-black hover:underline font-bold">{{post.title}}</h1>
@@ -46,7 +46,7 @@
       
 <!-- =========================================Sid Bar=================================== -->
 
-         <div class="w-full md:w-1/2 lg:w-4/12 p-1">
+         <div class="w-full md:w-1/2 lg:w-4/12 p-1 md:pr-8">
          <div class="grid grid-rows">
             
             <FrontSideBar />

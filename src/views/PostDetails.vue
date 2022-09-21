@@ -11,7 +11,7 @@
                 <div v-if="error">{{error}}</div>
                 <div v-if="post">
                     <h1 class="text-4xl font-medium leading-tight">{{post.title}}</h1>
-                    <img class="object-contain md:object-scale-down" :src="post.cover" alt="Man looking at item at a store">
+                    <img class="pt-4 pb-4 object-contain md:object-scale-down" :src="post.cover" alt="Man looking at item at a store">
                     <p class="leading-9 subpixel-antialiased">{{post.body}}</p>
                 </div>
 

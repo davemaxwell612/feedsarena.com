@@ -3,26 +3,24 @@
     <div class="flex justify-end h-full">
         <input class="hidden" aria-hidden="true" checked="checked" type="checkbox" name="" id="sidebar-toggle">
         
-        <!-- <Thesidebar /> -->
         <main class="content">
           <div class="bg-gray-200 main_section">
           <!-- <input type="text" placeholder="search" v-model="search"> -->
-           <!-- <TrendingPosts /> -->
-           <div v-if="error">{{error}}</div>
+
+          <div v-if="error">{{error}}</div>
 
             <div v-if="posts.length">
-              <PostList :posts="posts" />
-           </div>
+                <PostList :posts="posts" />
+            </div>
 
-          <div v-else>
-            <Spinner />
-          </div>
+            <div v-else>
+              <Spinner />
+            </div>
 
         </div>
       </main>
 
     </div>
-    <!-- Footer -->
     
   </div>
 
