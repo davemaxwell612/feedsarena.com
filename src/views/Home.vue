@@ -23,7 +23,6 @@
 
     </div>
     <!-- Footer -->
-    <Footer />
     
   </div>
 
@@ -38,7 +37,6 @@ import getPosts from '../Composibles/getPosts'
 import TrendingPosts from '../components/TrendingPosts.vue'
 import Thesidebar from '../components/Thesidebar.vue'
 import Spinner from '../components/Spinner.vue'
-import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -47,7 +45,6 @@ export default {
     TrendingPosts,
     Thesidebar,
     Spinner,
-    Footer
 },
   setup(){
     // const search = ref('')
