@@ -4,9 +4,9 @@
         <input class="hidden" aria-hidden="true" checked="checked" type="checkbox" name="" id="sidebar-toggle">
         
         <!-- <Thesidebar /> -->
-
-      <main class="content">
-        <div class="bg-gray-200 main_section">
+        <main class="content">
+          <div class="bg-gray-200 main_section">
+          <!-- <input type="text" placeholder="search" v-model="search"> -->
            <!-- <TrendingPosts /> -->
            <div v-if="error">{{error}}</div>
 
@@ -22,6 +22,8 @@
       </main>
 
     </div>
+    <!-- Footer -->
+    <Footer />
     
   </div>
 
@@ -29,12 +31,14 @@
 </template>
 
 <script>
+  import {computed, ref} from 'vue'
 // @ is an alias to /src
 import PostList from '../components/PostList.vue'
 import getPosts from '../Composibles/getPosts'
 import TrendingPosts from '../components/TrendingPosts.vue'
 import Thesidebar from '../components/Thesidebar.vue'
 import Spinner from '../components/Spinner.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -42,9 +46,14 @@ export default {
     PostList,
     TrendingPosts,
     Thesidebar,
-    Spinner
-  },
+    Spinner,
+    Footer
+},
   setup(){
+    // const search = ref('')
+    // const matchinPosts = computed (() =>{
+    //   return posts.value.filter((posts) => posts.includes(search.value))
+    // })
     const {posts, error, load} = getPosts()
     load();
     return{posts,error}

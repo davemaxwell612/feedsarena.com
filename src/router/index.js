@@ -6,6 +6,7 @@ import SignUp from '../views/SignUp.vue'
 import PostDetails from '../views/PostDetails.vue'
 import ForgotPassword from '../views/ForgotPassword.vue'
 import NotFound from '../views/NotFound.vue'
+import search from '../views/search.vue'
 
 const routes = [
   {
@@ -44,6 +45,11 @@ const routes = [
     path: '/:catchAll(.*)',
     name: 'NotFound',
     component: NotFound
+  },
+  {
+    path: '/search',
+    name: 'searc',
+    component: search
   },
   // {
   //   path: '/education',
