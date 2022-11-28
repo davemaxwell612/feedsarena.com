@@ -14,7 +14,7 @@
               <div class="max-w-md bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl mb-6" v-for="post in post" :key="post.id">
                <div class="flex">
                  <div class="shrink-0">
-                    <img class="scale-75 h-28 w-full object-cover md:h-full md:w-28" :src="post.cover" alt="Man looking at item at a store">
+                    <!-- <img class="scale-75 h-28 w-full object-cover md:h-full md:w-28" :src="post.cover" alt="Man looking at item at a store"> -->
                  </div>
                  <div class="pl-4 pt-2 mb-4">
                     <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">By Admin</div>
